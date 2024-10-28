@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Frontegg React Admin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates how to integrate [Frontegg's React SDK](https://frontegg.com/) with [React-Admin](https://marmelab.com/react-admin/), enabling a secure, feature-rich admin dashboard. Frontegg’s SDK provides robust user management, authentication, and other security features seamlessly within your React application.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- Node.js (>= 14.x.x)
+- npm or yarn
+- A Frontegg account and workspace ([Sign up here](https://frontegg.com/)) to get your client ID and API base URL.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. **Clone the Repository**
 
-### `npm test`
+    ```bash
+    git clone https://github.com/thedignifiedco/frontegg-react-admin.git
+    cd frontegg-react-admin
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies**
 
-### `npm run build`
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    or, if you prefer yarn:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    yarn install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Configure Frontegg**
 
-### `npm run eject`
+    To set up Frontegg, you will need your `FRONTEGG_CLIENT_ID` and `FRONTEGG_BASE_URL`. These can be found in your Frontegg workspace settings.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    Create a `.env` file in the root directory and add your Frontegg credentials:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```plaintext
+    REACT_APP_FRONTEGG_BASE_URL=https://your_base_url.frontegg.com
+    REACT_APP_FRONTEGG_CLIENT_ID=your_client_id
+    REACT_APP_FRONTEGG_APP_ID=your_app_id
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Running the App
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To start the development server, run:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
