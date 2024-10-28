@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { FronteggProvider } from '@frontegg/react';
+
+const contextOptions = {
+  baseUrl: process.env.REACT_APP_FRONTEGG_BASE_URL!,
+  clientId: process.env.REACT_APP_FRONTEGG_CLIENT_ID!,
+  appId: process.env.REACT_APP_FRONTEGG_APP_ID!
+};
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+  <FronteggProvider contextOptions={contextOptions} hostedLoginBox={true}>
     <App />
+    </FronteggProvider>
   </React.StrictMode>
 );
 
